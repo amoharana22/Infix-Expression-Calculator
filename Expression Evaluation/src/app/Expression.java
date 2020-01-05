@@ -23,10 +23,7 @@ public class Expression {
      */
     public static void //works for now
     makeVariableLists(String expr, ArrayList<Variable> vars, ArrayList<Array> arrays) {
-        /** COMPLETE THIS METHOD **/
-        /** DO NOT create new vars and arrays - they are already created before being sent in
-         ** to this method - you just need to fill them in.
-         **/
+     
         StringTokenizer expression=new StringTokenizer(expr.trim(),delims);
 
         while(expression.hasMoreElements()) {
@@ -119,10 +116,8 @@ public class Expression {
      */
     public static float 
     evaluate(String expr, ArrayList<Variable> vars, ArrayList<Array> arrays) {
-        /** COMPLETE THIS METHOD **/
-        // following line just a placeholder for compilation
-
-        //StringTokenizer evaluation=new StringTokenizer(expr,delims,true);
+     
+       
 
         Stack<Float> operands=new Stack<Float>();
 
@@ -332,7 +327,7 @@ public class Expression {
             }
 
 
-                 //add reversal loops
+            
                while(!toperands.isEmpty()) {
                    operands.push(toperands.pop());
                }
@@ -360,7 +355,7 @@ public class Expression {
 
 
                 }else if(operator.peek().equals("+")) {
-                    operator.pop(); // this may have been why the method isnt working;
+                    operator.pop(); 
 
                     float first=operands.pop();
 
@@ -370,7 +365,7 @@ public class Expression {
 
 
                 }else if(operator.peek().equals("/")) {
-                    operator.pop(); // this may have been why the method isnt working;
+                    operator.pop(); 
 
                     float first=operands.pop();
 
@@ -379,7 +374,7 @@ public class Expression {
                     answer=first/second;
 
                 }else if(operator.peek().equals("*")) {
-                    operator.pop(); // this may have been why the method isnt working;
+                    operator.pop(); 
 
                     float first=operands.pop();
 
@@ -407,4 +402,3 @@ public class Expression {
     }
 
 }
-//last tested in learning center at 12:01 am, cleared for submission
